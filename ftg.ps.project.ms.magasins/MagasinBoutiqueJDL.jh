@@ -1,0 +1,65 @@
+entity Boutique {
+    nIdProprietaire Long,
+    ref String,
+    adresse String,
+    description String
+}
+
+entity Magasin {
+    nIdProprietaire Long,
+    ref String,
+    adresse String,
+    description String
+}
+
+entity Produit {
+    code String,
+    designation String,
+    prixUnitaire BigDecimal,
+    descriptionProduit String
+}
+
+entity Service {
+    code String,
+    designation String,
+    prixUnitaire BigDecimal,
+    descriptionProduit String
+}
+entity BoutiqueService {
+}
+
+entity BoutiqueProduit {
+}
+
+entity BonCommande {
+    numero Long,
+    dateEmission LocalDate,
+    dateReglement LocalDate,
+    acheteurId Long
+}
+
+entity MagasinProduit{
+}
+
+entity BonLivraison{
+    numero Long
+}
+
+relationship OneToMany {
+    
+    BoutiqueProduit {boutiqueProduitB} to Boutique,
+    BoutiqueProduit {boutiqueProduitP} to Produit,
+    
+    BoutiqueService {boutiqueServiceS} to Service,
+    BoutiqueService {boutiqueServiceB} to Boutique,
+    
+   MagasinProduit {magasinPrduitM} to Magasin,
+   MagasinProduit {magasinPrduitB} to Produit,
+    
+    BonCommande{articleP} to Produit,
+    BonCommande{articleS} to Service
+}
+
+relationship OneToOne{
+    BonCommande{livraisonBon} to BonLivraison
+}

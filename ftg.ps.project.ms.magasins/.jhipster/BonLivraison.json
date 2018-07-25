@@ -1,0 +1,20 @@
+{
+    "name": "BonLivraison",
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180725014839",
+    "entityTableName": "bon_livraison",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "psMagasin"
+}

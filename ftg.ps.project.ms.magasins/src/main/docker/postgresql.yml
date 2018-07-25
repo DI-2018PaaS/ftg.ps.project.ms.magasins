@@ -1,0 +1,11 @@
+version: '2'
+services:
+    psmagasin-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/psMagasin/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=psMagasin
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

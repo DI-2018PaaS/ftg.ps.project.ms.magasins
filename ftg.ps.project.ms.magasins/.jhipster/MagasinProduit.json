@@ -1,0 +1,28 @@
+{
+    "name": "MagasinProduit",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "magasinPrduitM",
+            "otherEntityName": "magasin",
+            "otherEntityRelationshipName": "magasinProduit"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "magasinPrduitB",
+            "otherEntityName": "produit",
+            "otherEntityRelationshipName": "magasinProduit"
+        }
+    ],
+    "changelogDate": "20180725014838",
+    "entityTableName": "magasin_produit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "psMagasin"
+}

@@ -1,0 +1,51 @@
+{
+    "name": "Produit",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "designation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prixUnitaire",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "descriptionProduit",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "boutiqueProduit",
+            "otherEntityName": "boutiqueProduit",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "bonCommande",
+            "otherEntityName": "bonCommande",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "magasinProduit",
+            "otherEntityName": "magasinProduit",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180725014833",
+    "entityTableName": "produit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "psMagasin"
+}

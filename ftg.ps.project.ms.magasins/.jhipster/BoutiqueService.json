@@ -1,0 +1,28 @@
+{
+    "name": "BoutiqueService",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "boutiqueServiceS",
+            "otherEntityName": "service",
+            "otherEntityRelationshipName": "boutiqueService"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "boutiqueServiceB",
+            "otherEntityName": "boutique",
+            "otherEntityRelationshipName": "boutiqueService"
+        }
+    ],
+    "changelogDate": "20180725014835",
+    "entityTableName": "boutique_service",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "psMagasin"
+}

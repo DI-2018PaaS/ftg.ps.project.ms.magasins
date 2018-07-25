@@ -1,0 +1,53 @@
+{
+    "name": "BonCommande",
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateEmission",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateReglement",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "acheteurId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "livraisonBon",
+            "otherEntityName": "bonLivraison",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bonCommande"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "articleP",
+            "otherEntityName": "produit",
+            "otherEntityRelationshipName": "bonCommande"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "articleS",
+            "otherEntityName": "service",
+            "otherEntityRelationshipName": "bonCommande"
+        }
+    ],
+    "changelogDate": "20180725014837",
+    "entityTableName": "bon_commande",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "psMagasin"
+}
